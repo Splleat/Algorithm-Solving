@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Random;
 
 public class Boj2751_SortingNumbers2 {
-    public static void quickSort(int[] arr, int left, int right, Random random) {
+    static void quickSort(int[] arr, int left, int right, Random random) {
         if (left >= right) return;
 
         int partition = partition(arr, left, right, random);
@@ -15,7 +15,7 @@ public class Boj2751_SortingNumbers2 {
         quickSort(arr, partition, right, random);
     }
 
-    public static int partition(int[] arr, int left, int right, Random random) {
+    static int partition(int[] arr, int left, int right, Random random) {
         int randomIdx = random.nextInt(right - left + 1) + left;
 
         int pivot = arr[randomIdx];
@@ -34,7 +34,7 @@ public class Boj2751_SortingNumbers2 {
         return left;
     }
 
-    public static void swap(int[] arr, int a, int b) {
+    static void swap(int[] arr, int a, int b) {
         int temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;

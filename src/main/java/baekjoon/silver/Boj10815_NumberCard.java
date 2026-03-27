@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Boj10815_NumberCard {
-    public static void quickSort(int[] arr, int left, int right) {
+    static void quickSort(int[] arr, int left, int right) {
         if (left >= right) return;
 
         int partition = partition(arr, left, right);
@@ -13,7 +13,7 @@ public class Boj10815_NumberCard {
         quickSort(arr, partition, right);
     }
 
-    public static int partition(int[] arr, int left, int right) {
+    static int partition(int[] arr, int left, int right) {
         int mid = left + (right - left) / 2;
         int pivot = arr[mid];
 
@@ -31,13 +31,13 @@ public class Boj10815_NumberCard {
         return left;
     }
 
-    public static void swap(int[] arr, int a, int b) {
+    static void swap(int[] arr, int a, int b) {
         int temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
     }
 
-    public static boolean binarySearch(int[] arr, int target) {
+    static boolean binarySearch(int[] arr, int target) {
         int left = 0;
         int right = arr.length - 1;
 

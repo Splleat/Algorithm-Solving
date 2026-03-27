@@ -26,7 +26,7 @@ public class Boj1018_ChessBoard {
         System.out.println(countMinColorChanges(board, m, n));
     }
 
-    private static int countMinColorChanges(char[][] board, int m, int n) {
+    static int countMinColorChanges(char[][] board, int m, int n) {
 
         int minChange = Integer.MAX_VALUE;
 
@@ -43,7 +43,7 @@ public class Boj1018_ChessBoard {
         return minChange;
     }
 
-    private static int countColorChanges(char[][] board, int startRow, int startCol) {
+    static int countColorChanges(char[][] board, int startRow, int startCol) {
         char[][] type = {{'W', 'B', 'W', 'B', 'W', 'B', 'W', 'B'},
                 {'B', 'W', 'B', 'W', 'B', 'W', 'B', 'W'}};
         int sum = 0;

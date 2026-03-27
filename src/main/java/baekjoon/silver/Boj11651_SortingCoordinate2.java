@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Boj11651_SortingCoordinate2 {
-    public static void quickSort(int[] x, int[] y, int left, int right) {
+    static void quickSort(int[] x, int[] y, int left, int right) {
         if (left >= right) return;
 
         int partition = partition(x, y, left, right);
@@ -13,7 +13,7 @@ public class Boj11651_SortingCoordinate2 {
         quickSort(x, y, partition, right);
     }
 
-    public static int partition(int[] x, int[] y, int left, int right) {
+    static int partition(int[] x, int[] y, int left, int right) {
         int mid = left + (right - left) / 2;
         int pivotX = x[mid];
         int pivotY = y[mid];
@@ -33,7 +33,7 @@ public class Boj11651_SortingCoordinate2 {
         return left;
     }
 
-    public static void swap(int[] arr, int a, int b) {
+    static void swap(int[] arr, int a, int b) {
         int temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;

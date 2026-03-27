@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Boj10989_SortingNumbers3 {
-    public static void mergeSort(int[] arr, int left, int right) {
+    static void mergeSort(int[] arr, int left, int right) {
         if (left >= right) return;
 
         int mid = left + (right - left) / 2;
@@ -15,7 +15,7 @@ public class Boj10989_SortingNumbers3 {
         merge(arr, left, mid, right);
     }
 
-    public static void merge(int[] arr, int left, int mid, int right) {
+    static void merge(int[] arr, int left, int mid, int right) {
         int i = left;
         int j = mid + 1;
         int k = 0;

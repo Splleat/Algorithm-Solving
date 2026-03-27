@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Boj1181_SortingWords {
-    public static void quickSort(String[] arr, int left, int right) {
+    static void quickSort(String[] arr, int left, int right) {
         if (left >= right) return;
 
         int partition = partition(arr, left, right);
@@ -13,7 +13,7 @@ public class Boj1181_SortingWords {
         quickSort(arr, partition, right);
     }
 
-    public static int partition(String[] arr, int left, int right) {
+    static int partition(String[] arr, int left, int right) {
         int mid = left + (right - left) / 2;
         String pivot = arr[mid];
 
@@ -31,13 +31,13 @@ public class Boj1181_SortingWords {
         return left;
     }
 
-    public static void swap(String[] arr, int a, int b) {
+    static void swap(String[] arr, int a, int b) {
         String temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
     }
 
-    public static int compare(String str1, String str2) {
+    static int compare(String str1, String str2) {
         if (str1 == null && str2 == null) return 0;
         if (str1 == null) return -1;
         if (str2 == null) return 1;

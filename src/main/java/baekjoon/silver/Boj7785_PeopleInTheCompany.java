@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Boj7785_PeopleInTheCompany {
-    public static void quickSort(String[] arr, int left, int right) {
+    static void quickSort(String[] arr, int left, int right) {
         if (left >= right) return;
 
         int partition = partition(arr, left, right);
@@ -13,7 +13,7 @@ public class Boj7785_PeopleInTheCompany {
         quickSort(arr, partition, right);
     }
 
-    public static int partition(String[] arr, int left, int right) {
+    static int partition(String[] arr, int left, int right) {
         int mid = left + (right - left) / 2;
         String pivot = arr[mid];
 
@@ -31,7 +31,7 @@ public class Boj7785_PeopleInTheCompany {
         return left;
     }
 
-    public static void swap(String[] arr, int a, int b) {
+    static void swap(String[] arr, int a, int b) {
         String temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;

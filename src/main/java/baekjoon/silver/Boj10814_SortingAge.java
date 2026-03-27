@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Boj10814_SortingAge {
-    public static void quickSort(int[][] intArr, String[] strArr, int left, int right) {
+    static void quickSort(int[][] intArr, String[] strArr, int left, int right) {
         if (left >= right) return;
 
         int partition = partition(intArr, strArr, left, right);
@@ -13,7 +13,7 @@ public class Boj10814_SortingAge {
         quickSort(intArr, strArr, partition, right);
     }
 
-    public static int partition(int[][] intArr, String[] strArr, int left, int right) {
+    static int partition(int[][] intArr, String[] strArr, int left, int right) {
         int mid = left + (right - left) / 2;
 
         int[] pivot = intArr[mid];
@@ -35,7 +35,7 @@ public class Boj10814_SortingAge {
         return i;
     }
 
-    public static int compare(int[] a, int[] b) {
+    static int compare(int[] a, int[] b) {
         if (a[0] != b[0]) {
             return a[0] - b[0];
         }
@@ -43,7 +43,7 @@ public class Boj10814_SortingAge {
         return a[1] - b[1];
     }
 
-    public static void swap(int[][] intArr, String[] strArr, int a, int b) {
+    static void swap(int[][] intArr, String[] strArr, int a, int b) {
         int[] intTemp = intArr[a];
         intArr[a] = intArr[b];
         intArr[b] = intTemp;

@@ -1,7 +1,5 @@
 import java.util.Map;
 import java.util.HashMap;
-import java.util.List;
-import java.util.ArrayList;
 
 class Solution {
     public int solution(String[][] clothes) {
@@ -13,8 +11,8 @@ class Solution {
             clothMap.put(clothes[i][1], clothMap.getOrDefault(clothes[i][1], 0) + 1);
         }
         
-        for (String s : clothMap.keySet()) {
-            answer *= (clothMap.get(s) + 1);
+        for (int count : clothMap.values()) {
+            answer *= (count + 1);
         }
         
         answer--;

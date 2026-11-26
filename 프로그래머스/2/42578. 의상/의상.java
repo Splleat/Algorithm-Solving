@@ -7,20 +7,15 @@ class Solution {
     public int solution(String[][] clothes) {
         int answer = 1;
         
-        Map<String, List<String>> clothMap = new HashMap<>();
+        Map<String, Integer> clothMap = new HashMap<>();
         
         for (int i = 0; i < clothes.length; i++) {
-            clothMap.computeIfAbsent(clothes[i][1], k -> new ArrayList<>()).add(clothes[i][0]);
+            clothMap.put(clothes[i][1], clothMap.getOrDefault(clothes[i][1], 0) + 1);
         }
         
         for (String s : clothMap.keySet()) {
-            answer *= (clothMap.get(s).size() + 1);
+            answer *= (clothMap.get(s) + 1);
         }
-    
-        
-//         for (int i = 0; i < clothMap.size(); i++) {
-//             answer *= (clothMap.get(clothes[i][1]).size() + 1);
-//         }
         
         answer--;
         
